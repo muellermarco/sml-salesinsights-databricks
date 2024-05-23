@@ -1,0 +1,12 @@
+unique_name: dim_geo_country
+object_type: dataset
+label: dim_geo_country
+connection_id: Databricks
+table: dim_geo_country
+project_properties:
+  allow_aggregates: true
+  aggregate_locality: managed
+
+columns:
+  - name: country
+    data_type: string

@@ -1,0 +1,8 @@
+unique_name: Databricks
+object_type: connection
+as_connection: Databricks
+label: Databricks
+db_type: databricks
+database: hive_metastore
+schema: sampleprojecttest
+override: true

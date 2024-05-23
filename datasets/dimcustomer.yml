@@ -1,0 +1,26 @@
+unique_name: dimcustomer
+label: dimcustomer
+object_type: dataset
+connection_id: Databricks
+table: dimcustomer
+project_properties:
+  allow_aggregates: true
+  aggregate_locality: managed
+
+columns:
+  - name: customerkey
+    data_type: long
+  - name: datefirstpurchase
+    data_type: string
+  - name: firstname
+    data_type: string
+  - name: fullname
+    data_type: string
+  - name: gender
+    data_type: string
+  - name: geographykey
+    data_type: long
+  - name: lastname
+    data_type: string
+  - name: occupation
+    data_type: string

@@ -1,0 +1,7 @@
+unique_name: MinOrderDate
+object_type: metric
+label: MinOrderDate 1
+calculation_method: minimum
+dataset: factinternetsales
+column: orderdatekey
+type: measure

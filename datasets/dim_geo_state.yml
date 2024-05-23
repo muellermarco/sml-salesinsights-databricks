@@ -1,0 +1,16 @@
+unique_name: dim_geo_state
+label: dim_geo_state
+object_type: dataset
+connection_id: Databricks
+table: dim_geo_state
+project_properties:
+  allow_aggregates: true
+  aggregate_locality: managed
+
+columns:
+  - name: country
+    data_type: string
+  - name: state
+    data_type: string
+  - name: statekey
+    data_type: string
