@@ -4,5 +4,5 @@ as_connection: Databricks
 label: Databricks
 db_type: databricks
 database: hive_metastore
-schema: sampleprojecttest
+schema: as_adventure
 override: true
