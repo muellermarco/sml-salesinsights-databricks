@@ -1,6 +1,6 @@
 unique_name: Customer Dimension
 object_type: dimension
-label: Customer Dimension
+label: Customer Dimension 2
 description: Customer Key
 hierarchies:
   - unique_name: Customer Hierarchy
@@ -15,12 +15,14 @@ hierarchies:
             key_columns:
               - firstname
             name_column: firstname
+            sort_column: empty_value
           - unique_name: d_lastname
             label: Last Name
             dataset: dimcustomer
             key_columns:
               - lastname
             name_column: lastname
+            sort_column: empty_value
           - unique_name: Occupation
             label: Occupation
             dataset: dimcustomer
@@ -28,6 +30,7 @@ hierarchies:
             key_columns:
               - occupation
             name_column: occupation
+            sort_column: empty_value
 level_attributes:
   - unique_name: Customer Name
     label: Customer Name
@@ -37,6 +40,7 @@ level_attributes:
     key_columns:
       - customerkey
     name_column: fullname
+    sort_column: empty_value
 relationships:
   - unique_name: CustomerDimension_GeographyDimension
     from:
