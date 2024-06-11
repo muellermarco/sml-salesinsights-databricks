@@ -31,7 +31,6 @@ hierarchies:
               - rpt_quarter_of_year_name
             name_column: rpt_quarter_of_year_name
             sort_column: rpt_quarter_of_year_name
-        time_unit: quarter
       - unique_name: custommonth
         parallel_periods:
           - key_columns:
@@ -63,7 +62,6 @@ hierarchies:
               - rpt_month_of_year_name
             name_column: rpt_month_of_year_name
             sort_column: rpt_month_of_year_name
-        time_unit: month
       - unique_name: customweek
         parallel_periods:
           - key_columns:
@@ -87,7 +85,6 @@ hierarchies:
               - rpt_week_of_year_name
             name_column: rpt_week_of_year_name
             sort_column: rpt_week_of_year_name
-        time_unit: week
       - unique_name: customday
         parallel_periods:
           - key_columns:
@@ -119,7 +116,6 @@ hierarchies:
               - rpt_day_of_year_name
             name_column: rpt_day_of_year_name
             sort_column: rpt_day_of_year_name
-        time_unit: day
   - unique_name: Date Month Hierarchy
     label: Date Month Hierarchy
     description: A Gregorian Date Hierarchy.  Organizes time by Year, Quarter, Month, Day.
@@ -127,8 +123,6 @@ hierarchies:
     folder: Date Attributes
     levels:
       - unique_name: YearMonth
-        time_unit: year
-      - unique_name: Quarter
         secondary_attributes:
           - unique_name: d_quarter_number
             label: Quarter Number
@@ -138,7 +132,6 @@ hierarchies:
               - quarter_of_year
             name_column: quarter_of_year
             sort_column: quarter_of_year
-        time_unit: quarter
       - unique_name: Month1
         secondary_attributes:
           - unique_name: d_month_of_year
@@ -149,7 +142,6 @@ hierarchies:
               - month_of_year
             name_column: month_of_year
             sort_column: month_of_year
-        time_unit: month
       - unique_name: DayMonth
         secondary_attributes:
           - unique_name: d_day_of_month
@@ -215,14 +207,12 @@ hierarchies:
               - day_of_week
             name_column: day_of_week
             sort_column: day_of_week
-        time_unit: day
   - unique_name: Date Week Hierarchy
     label: Date Week Hierarchy
     filter_empty: 'yes'
     folder: Date Attributes
     levels:
       - unique_name: YearWeek
-        time_unit: year
       - unique_name: Week
         secondary_attributes:
           - unique_name: d_week_of_year
@@ -233,9 +223,8 @@ hierarchies:
               - week_of_year
             name_column: week_of_year
             sort_column: week_of_year
-        time_unit: week
       - unique_name: DayMonth
-        time_unit: day
+
   - unique_name: Retail445
     label: Retail445
     description: A Retail 4-4-5 calendar
@@ -243,7 +232,6 @@ hierarchies:
     folder: Date Attributes
     levels:
       - unique_name: rpt_Year
-        time_unit: year
       - unique_name: rpt_Half_Year
         secondary_attributes:
           - unique_name: rpt_Half_Year_Of_Year
@@ -254,7 +242,6 @@ hierarchies:
               - rpt_half_year_of_year
             name_column: rpt_half_year_of_year_name
             sort_column: rpt_half_year_of_year_name
-        time_unit: halfyear
       - unique_name: rpt_Quarter
         secondary_attributes:
           - unique_name: rpt_Quarter_Of_Year
@@ -265,7 +252,6 @@ hierarchies:
               - rpt_quarter_of_year
             name_column: rpt_quarter_of_year_name
             sort_column: rpt_quarter_of_year_name
-        time_unit: quarter
       - unique_name: rpt_Month
         secondary_attributes:
           - unique_name: d_rpt_Month_Name
@@ -292,7 +278,6 @@ hierarchies:
               - rpt_month_of_year
             name_column: rpt_month_of_year_name
             sort_column: rpt_month_of_year_name
-        time_unit: month
       - unique_name: rpt_Week
         secondary_attributes:
           - unique_name: rpt_Week_Of_Month
@@ -311,7 +296,6 @@ hierarchies:
               - rpt_week_of_year
             name_column: rpt_week_of_year_name
             sort_column: rpt_week_of_year_name
-        time_unit: week
       - unique_name: rpt_Day
         secondary_attributes:
           - unique_name: rpt_Day_Of_Month
@@ -338,7 +322,6 @@ hierarchies:
               - rpt_day_of_year
             name_column: rpt_day_of_year_name
             sort_column: rpt_day_of_year_name
-        time_unit: day
 level_attributes:
   - unique_name: customday
     label: Custom Day
