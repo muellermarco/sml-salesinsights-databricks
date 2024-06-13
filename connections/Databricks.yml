@@ -1,6 +1,6 @@
 unique_name: Databricks
 object_type: connection
-as_connection: Databricks
+as_connection: databricks
 label: Databricks
 db_type: databricks
 database: hive_metastore
