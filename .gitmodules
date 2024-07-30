@@ -1,4 +1,0 @@
-[submodule "sml-salesinsights-common"]
-	path = Common-Objects
-	url = https://github.com/muellermarco/sml-salesinsights-common.git
-	branch = main
