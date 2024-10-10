@@ -17,5 +17,5 @@ level_attributes:
     key_columns:
       - color
     name_column: color
-    sort_column: empty_value
+
 type: standard
