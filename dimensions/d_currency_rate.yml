@@ -1,0 +1,19 @@
+unique_name: d_currency_rate
+object_type: dimension
+label: Currency Rate
+hierarchies:
+  - unique_name: h_currency_rate
+    label: Currency Rate Hierarchy
+    levels:
+      - unique_name: avg_cur_rate
+level_attributes:
+  - unique_name: avg_cur_rate
+    label: Avg Currency Rate
+    contains_unique_names: false
+    dataset: factcurrencyrate
+    is_unique_key: false
+    key_columns:
+      - currencykey
+      - datekey
+    name_column: averagerate
+type: standard

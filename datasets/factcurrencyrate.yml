@@ -1,0 +1,16 @@
+unique_name: factcurrencyrate
+object_type: dataset
+label: factcurrencyrate
+columns:
+  - name: currencykey
+    data_type: int
+  - name: datekey
+    data_type: int
+  - name: averagerate
+    data_type: double
+  - name: endofdayrate
+    data_type: double
+  - name: date
+    data_type: string
+connection_id: con_hive_metastore_as_adventure_small
+table: factcurrencyrate

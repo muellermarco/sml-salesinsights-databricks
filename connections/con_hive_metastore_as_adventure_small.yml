@@ -1,0 +1,6 @@
+unique_name: con_hive_metastore_as_adventure_small
+object_type: connection
+label: con_hive_metastore_as_adventure_small
+as_connection: databricks
+database: hive_metastore
+schema: as_adventure_small

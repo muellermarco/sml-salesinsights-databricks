@@ -9,29 +9,29 @@ dimensions:
 drillthroughs:
   - unique_name: Customer Details
     attributes:
-      - dimension: Customer Dimension
-        name: Customer Name
-      - dimension: Geography Dimension
-        name: State
-      - dimension: Geography Dimension
-        name: Zip Code
-      - dimension: Geography Dimension
-        name: City
+      - name: Customer Name
+        dimension: Customer Dimension
+      - name: State
+        dimension: Geography Dimension
+      - name: Zip Code
+        dimension: Geography Dimension
+      - name: City
+        dimension: Geography Dimension
     metrics:
       - orderquantity1
       - salesamount1
   - unique_name: Shipping Details
     attributes:
-      - dimension: Color Dimension
-        name: Color
-      - dimension: Customer Dimension
-        name: Customer Name
-      - dimension: Size Dimension
-        name: Size
-      - dimension: Style Dimension
-        name: Style
-      - dimension: Product Dimension
-        name: Product Name
+      - name: Color
+        dimension: Color Dimension
+      - name: Customer Name
+        dimension: Customer Dimension
+      - name: Size
+        dimension: Size Dimension
+      - name: Style
+        dimension: Style Dimension
+      - name: Product Name
+        dimension: Product Dimension
     metrics:
       - orderquantity1
       - salesamount1
@@ -330,11 +330,11 @@ metrics:
 perspectives:
   - unique_name: Internet Sales - No PII
     dimensions:
-      - hierarchies:
-          - levels:
+      - name: Customer Dimension
+        hierarchies:
+          - name: Customer Hierarchy
+            levels:
               - Customer Name
-            name: Customer Hierarchy
-        name: Customer Dimension
         secondaryattributes:
           - d_firstname
           - d_lastname
@@ -419,4 +419,13 @@ relationships:
     to:
       dimension: Date Dimension
       level: DayMonth
+  - unique_name: factinternetsales_currencykey_to_d_currency_rate_avg_cur_rate
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - currencykey
+        - orderdatekey
+    to:
+      dimension: d_currency_rate
+      level: avg_cur_rate
 visible: true
