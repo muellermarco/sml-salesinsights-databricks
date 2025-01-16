@@ -5,7 +5,25 @@ hierarchies:
   - unique_name: h_currency_rate
     label: Currency Rate Hierarchy
     levels:
+      - unique_name: currencykey
       - unique_name: avg_cur_rate
+        secondary_attributes:
+          - unique_name: endofdayrate
+            label: endofdayrate
+            contains_unique_names: false
+            dataset: factcurrencyrate
+            is_unique_key: false
+            key_columns:
+              - endofdayrate
+            name_column: endofdayrate
+          - unique_name: datekey
+            label: datekey
+            contains_unique_names: false
+            dataset: factcurrencyrate
+            is_unique_key: false
+            key_columns:
+              - datekey
+            name_column: datekey
 level_attributes:
   - unique_name: avg_cur_rate
     label: Avg Currency Rate
@@ -16,4 +34,11 @@ level_attributes:
       - currencykey
       - datekey
     name_column: averagerate
+  - unique_name: currencykey
+    label: currencykey
+    contains_unique_names: false
+    dataset: factcurrencyrate
+    key_columns:
+      - currencykey
+    name_column: currencykey
 type: standard
