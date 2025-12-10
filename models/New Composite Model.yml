@@ -1,6 +1,0 @@
-unique_name: New Composite Model
-object_type: composite_model
-label: New Composite Model
-models:
-  - Inventory
-  - Sales
