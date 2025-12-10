@@ -289,10 +289,6 @@ metrics:
     folder: Time Relative
   - unique_name: SoldProductNDC-Order Retail445-PrevYearGrowthPct
     folder: Time Relative
-  - unique_name: SoldProductNDC-Order Retail445-YTD
-    folder: Time Relative
-  - unique_name: SoldProductNDC-Order Retail445-YTDPrevYear
-    folder: Time Relative
 relationships:
   - unique_name: factinternetsales_Date_Dimension_Order
     from:

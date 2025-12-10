@@ -1,0 +1,6 @@
+unique_name: Stock Balance
+object_type: metric
+label: Stock Balance
+calculation_method: sum
+column: orderquantity
+dataset: factinternetsales
