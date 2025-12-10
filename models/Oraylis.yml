@@ -1,0 +1,6 @@
+unique_name: Oraylis
+object_type: composite_model
+label: Oraylis
+models:
+  - Sales
+  - Inventory
