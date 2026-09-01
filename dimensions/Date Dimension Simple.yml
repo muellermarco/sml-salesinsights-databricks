@@ -1,0 +1,54 @@
+unique_name: Date Dimension Simple
+object_type: dimension
+label: Date Dimension Simple
+description: >-
+  Simplified copy of the Date Dimension with only the Gregorian
+  Year-Quarter-Month-Day hierarchy and no role-playing.
+hierarchies:
+  - unique_name: Date Month Hierarchy Simple
+    label: Date Month Hierarchy
+    description: A Gregorian Date Hierarchy.  Organizes time by Year, Quarter, Month, Day.
+    filter_empty: 'yes'
+    folder: Date Attributes
+    levels:
+      - unique_name: YearMonth_simple
+      - unique_name: Quarter_simple
+      - unique_name: Month1_simple
+      - unique_name: DayMonth_simple
+level_attributes:
+  - unique_name: YearMonth_simple
+    label: Year
+    description: Year level of the Standard Calendar Month Hierarchy.
+    dataset: datecustom
+    key_columns:
+      - year
+    name_column: year_name
+    sort_column: year
+    time_unit: year
+  - unique_name: Quarter_simple
+    label: Quarter
+    dataset: datecustom
+    key_columns:
+      - quarter
+    name_column: quarter_name
+    sort_column: quarter
+    time_unit: quarter
+  - unique_name: Month1_simple
+    label: Month
+    dataset: datecustom
+    key_columns:
+      - month
+    name_column: month_name
+    sort_column: month
+    time_unit: month
+  - unique_name: DayMonth_simple
+    label: Day
+    description: Day level of standard calendar Month Hierarchy
+    dataset: datecustom
+    is_unique_key: true
+    key_columns:
+      - datekey
+    name_column: date_name
+    sort_column: datekey
+    time_unit: day
+type: time
