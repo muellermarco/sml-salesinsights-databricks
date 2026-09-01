@@ -10,6 +10,9 @@ hierarchies:
     description: A Gregorian Date Hierarchy.  Organizes time by Year, Quarter, Month, Day.
     filter_empty: 'yes'
     folder: Date Attributes
+    default_member:
+      apply_only_when_in_query: false
+      expression: '[Date Dimension Simple].[Date Month Hierarchy Simple].[DayMonth_simple].&[`selectMaxDate("as_adventure.factinternetsales", "orderdatekey")`]'
     levels:
       - unique_name: YearMonth_simple
       - unique_name: Quarter_simple
