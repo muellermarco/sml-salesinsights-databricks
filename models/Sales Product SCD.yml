@@ -11,6 +11,16 @@ metrics:
     folder: SCD Metrics
   
 relationships:
+  - unique_name: factinternetsales_scd_Order_Dimension
+    from:
+      dataset: factinternetsales_scd
+      join_columns:
+        - salesorderlinenumber
+        - salesordernumber
+        - currencykey
+    to:
+      dimension: Order Dimension
+      level: order_line_item
   - unique_name: factinternetsales_Product_Dimension
     from:
       dataset: factinternetsales_scd
