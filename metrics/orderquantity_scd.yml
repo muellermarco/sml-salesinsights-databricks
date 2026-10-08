@@ -1,0 +1,8 @@
+unique_name: orderquantity_scd
+object_type: metric
+label: Order Quantity (SCD)
+calculation_method: sum
+format: general number
+dataset: factinternetsales_scd
+column: orderquantity
+type: measure

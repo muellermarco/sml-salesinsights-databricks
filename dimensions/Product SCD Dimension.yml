@@ -1,0 +1,62 @@
+unique_name: Product SCD Dimension
+object_type: dimension
+label: Product SCD Dimension
+description: >-
+  Type 2 slowly changing product dimension built on dimproduct_scd. The
+  business key is the product name; each row is a version, valid from
+  startdatekey (inclusive) to enddatekey (exclusive).
+hierarchies:
+  - unique_name: Product SCD hierarchy
+    label: Product
+    folder: Products
+    levels:
+      - unique_name: product_scd
+        secondary_attributes:
+          - unique_name: product_scd_list_price
+            label: List Price
+            dataset: dimproduct_scd
+            folder: Products
+            key_columns:
+              - listprice
+            name_column: listprice
+          - unique_name: product_scd_line
+            label: Product Line
+            dataset: dimproduct_scd
+            folder: Products
+            key_columns:
+              - productline
+            name_column: productline
+          - unique_name: product_scd_subcategory
+            label: Product Subcategory
+            dataset: dimproduct_scd
+            folder: Products
+            key_columns:
+              - productsubcategoryname
+            name_column: productsubcategoryname
+level_attributes:
+  - unique_name: product_scd
+    label: Product
+    dataset: dimproduct_scd
+    is_unique_key: false
+    key_columns:
+      - englishproductname
+    name_column: englishproductname
+    scd_properties:
+      effective_interval_type: right_open_interval
+      effective_start:
+        column: startdatekey
+        display_name_template: '{0} effective-start'
+        has_null_values: false
+        visible: true
+      effective_end:
+        column: enddatekey
+        display_name_template: '{0} effective-end'
+        has_null_values: false
+        visible: true
+      as_of_date:
+        display_name_template: '{0} As-Of-Date'
+      is_latest:
+        display_name_template: '{0} Is Latest'
+      join_on_fact_effective_key:
+        display_name_template: '{0} Join-On-Fact-Effective-Key'
+type: standard
