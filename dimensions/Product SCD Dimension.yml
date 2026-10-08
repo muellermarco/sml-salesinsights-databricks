@@ -3,6 +3,7 @@ object_type: dimension
 label: Product SCD Dimension
 description: >-
   Type 2 slowly changing product dimension built on dimproduct_scd. The
+  business key is the product name; each row is a version valid from
   startdatekey to enddatekey, both inclusive (closed interval).
 hierarchies:
   - unique_name: Product SCD hierarchy
