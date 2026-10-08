@@ -20,9 +20,9 @@ columns:
   - name: productsubcategoryname
     data_type: string
   - name: startdate
-    data_type: timestamp
+    data_type: datetime
   - name: enddate
-    data_type: timestamp
+    data_type: datetime
   - name: startdatekey
     data_type: int
   - name: enddatekey

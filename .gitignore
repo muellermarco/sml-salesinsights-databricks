@@ -23,3 +23,5 @@ TestResults.xml
 .DS_Store
 
 packages/
+
+.env
