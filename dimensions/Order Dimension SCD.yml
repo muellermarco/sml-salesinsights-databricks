@@ -1,0 +1,45 @@
+unique_name: Order Dimension SCD
+object_type: dimension
+label: Order Dimension SCD
+description: >-
+  Order dimension for the SCD model. Keyed on order number and line number
+  only, because currencykey in the order table does not match the fact
+  table. Currency is a secondary attribute of the order line.
+hierarchies:
+  - unique_name: Order Dimension SCD hierarchy
+    label: Order Dimension
+    folder: Orders
+    levels:
+      - unique_name: order_scd
+      - unique_name: order_line_item_scd
+        secondary_attributes:
+          - unique_name: currency_scd
+            label: Currency
+            dataset: dimorder_scd
+            folder: Orders
+            key_columns:
+              - currencykey
+            name_column: currency_name
+          - unique_name: typeorder_scd
+            label: Order Type
+            dataset: dimorder_scd
+            folder: Orders
+            key_columns:
+              - type
+            name_column: type
+level_attributes:
+  - unique_name: order_scd
+    label: Order
+    dataset: dimorder_scd
+    key_columns:
+      - salesordernumber
+    name_column: salesordernumber
+  - unique_name: order_line_item_scd
+    label: Order Line Item
+    dataset: dimorder_scd
+    is_unique_key: true
+    key_columns:
+      - salesorderlinenumber
+      - salesordernumber
+    name_column: salesorderlinenumber
+type: standard

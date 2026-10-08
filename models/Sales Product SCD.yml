@@ -17,10 +17,9 @@ relationships:
       join_columns:
         - salesorderlinenumber
         - salesordernumber
-        - currencykey
     to:
-      dimension: Order Dimension
-      level: order_line_item
+      dimension: Order Dimension SCD
+      level: order_line_item_scd
   - unique_name: factinternetsales_Product_Dimension
     from:
       dataset: factinternetsales_scd
