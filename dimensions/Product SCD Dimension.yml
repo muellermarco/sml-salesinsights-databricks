@@ -3,8 +3,7 @@ object_type: dimension
 label: Product SCD Dimension
 description: >-
   Type 2 slowly changing product dimension built on dimproduct_scd. The
-  business key is the product name; each row is a version, valid from
-  startdatekey (inclusive) to enddatekey (exclusive).
+  startdatekey to enddatekey, both inclusive (closed interval).
 hierarchies:
   - unique_name: Product SCD hierarchy
     label: Product
@@ -42,7 +41,7 @@ level_attributes:
       - englishproductname
     name_column: englishproductname
     scd_properties:
-      effective_interval_type: right_open_interval
+      effective_interval_type: closed
       effective_start:
         column: startdatekey
         display_name_template: '{0} effective-start'
