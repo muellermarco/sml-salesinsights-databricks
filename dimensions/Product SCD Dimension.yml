@@ -8,12 +8,14 @@ description: >-
 hierarchies:
   - unique_name: Product SCD hierarchy
     label: Product
+    description: "Product hierarchy of the Product SCD Dimension dimension: Product."
     folder: Products
     levels:
       - unique_name: product_scd
         secondary_attributes:
           - unique_name: product_scd_list_price
             label: List Price
+            description: "List Price: attribute of the Product level in the Product SCD Dimension dimension, from dimproduct_scd.listprice."
             dataset: dimproduct_scd
             folder: Products
             key_columns:
@@ -21,6 +23,7 @@ hierarchies:
             name_column: listprice
           - unique_name: product_scd_line
             label: Product Line
+            description: "Product Line: attribute of the Product level in the Product SCD Dimension dimension, from dimproduct_scd.productline."
             dataset: dimproduct_scd
             folder: Products
             key_columns:
@@ -28,6 +31,7 @@ hierarchies:
             name_column: productline
           - unique_name: product_scd_subcategory
             label: Product Subcategory
+            description: "Product Subcategory: attribute of the Product level in the Product SCD Dimension dimension, from dimproduct_scd.productsubcategoryname."
             dataset: dimproduct_scd
             folder: Products
             key_columns:
@@ -36,6 +40,7 @@ hierarchies:
 level_attributes:
   - unique_name: product_scd
     label: Product
+    description: "Product level of the Product SCD Dimension dimension in the Product hierarchy, from dimproduct_scd.englishproductname."
     dataset: dimproduct_scd
     is_unique_key: false
     key_columns:

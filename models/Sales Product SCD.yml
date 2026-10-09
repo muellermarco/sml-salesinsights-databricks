@@ -1,6 +1,7 @@
 unique_name: Sales Product SCD
 object_type: model
 label: Sales Product SCD
+description: "Sales Product SCD model with 3 metrics in folders SCD Metrics; fact datasets: factinternetsales_scd; dimensions: Date Dimension, Order Dimension SCD, Product SCD Dimension."
 dimensions: []
 metrics:
   - unique_name: orderquantity_scd

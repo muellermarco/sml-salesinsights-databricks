@@ -1,4 +1,5 @@
 unique_name: Average Sales per Order
 object_type: metric_calc
 label: Average Sales per Order
+description: "Average Sales Amount per order: Sales Amount divided by Order Quantity."
 expression: "([Measures].[salesamount1] / [Measures].[orderquantity1])"

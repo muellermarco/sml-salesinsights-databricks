@@ -1,6 +1,7 @@
 unique_name: Stock Balance
 object_type: metric
 label: Stock Balance
+description: "Sum of factinternetsales.orderquantity."
 calculation_method: sum
 column: orderquantity
 dataset: factinternetsales

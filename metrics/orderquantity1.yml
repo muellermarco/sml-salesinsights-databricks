@@ -1,6 +1,7 @@
 unique_name: orderquantity1
 object_type: metric
 label: Order Quantity
+description: "Sum of factinternetsales.orderquantity; formatted as general number."
 calculation_method: sum
 format: general number
 dataset: factinternetsales

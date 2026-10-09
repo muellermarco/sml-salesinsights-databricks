@@ -1,6 +1,7 @@
 unique_name: lastproductunitprice
 object_type: metric
 label: Last Product Unit Price
+description: "Maximum of factinternetsales.unitprice; formatted as $#,##0.00."
 calculation_method: maximum
 folder: Product Metrics
 format: "$#,##0.00"

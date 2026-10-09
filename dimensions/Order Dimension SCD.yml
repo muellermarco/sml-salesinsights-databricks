@@ -8,6 +8,7 @@ description: >-
 hierarchies:
   - unique_name: Order Dimension SCD hierarchy
     label: Order Dimension
+    description: "Order Dimension hierarchy of the Order Dimension SCD dimension: Order › Order Line Item."
     folder: Orders
     levels:
       - unique_name: order_scd
@@ -15,6 +16,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: currency_scd
             label: Currency
+            description: "Currency: attribute of the Order Line Item level in the Order Dimension SCD dimension, from dimorder_scd.currency_name."
             dataset: dimorder_scd
             folder: Orders
             key_columns:
@@ -22,6 +24,7 @@ hierarchies:
             name_column: currency_name
           - unique_name: typeorder_scd
             label: Order Type
+            description: "Order Type: attribute of the Order Line Item level in the Order Dimension SCD dimension, from dimorder_scd.type."
             dataset: dimorder_scd
             folder: Orders
             key_columns:
@@ -30,12 +33,14 @@ hierarchies:
 level_attributes:
   - unique_name: order_scd
     label: Order
+    description: "Order level of the Order Dimension SCD dimension in the Order Dimension hierarchy, from dimorder_scd.salesordernumber."
     dataset: dimorder_scd
     key_columns:
       - salesordernumber
     name_column: salesordernumber
   - unique_name: order_line_item_scd
     label: Order Line Item
+    description: "Order Line Item level of the Order Dimension SCD dimension in the Order Dimension hierarchy, from dimorder_scd.salesorderlinenumber (key: salesorderlinenumber, salesordernumber); unique key."
     dataset: dimorder_scd
     is_unique_key: true
     key_columns:

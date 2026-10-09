@@ -1,9 +1,11 @@
 unique_name: Order Dimension
 object_type: dimension
 label: Order Dimension
+description: "Order Dimension dimension with hierarchies Order Dimension; levels sourced from dimorder."
 hierarchies:
   - unique_name: Order Dimension hierarchy
     label: Order Dimension
+    description: "Order Dimension hierarchy of the Order Dimension dimension: Currency › Order › Order Line Item."
     default_member:
       apply_only_when_in_query: true
       expression: '[Order Dimension].[Order Dimension hierarchy].[currency].&[100]'
@@ -15,6 +17,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: typeorder
             label: Order Type
+            description: "Order Type: attribute of the Order Line Item level in the Order Dimension dimension, from dimorder.type."
             dataset: dimorder
             folder: Orders
             key_columns:
@@ -24,12 +27,14 @@ hierarchies:
 level_attributes:
   - unique_name: currency
     label: Currency
+    description: "Currency level of the Order Dimension dimension in the Order Dimension hierarchy, from dimorder.currency_name (key: currencykey)."
     dataset: dimorder
     key_columns:
       - currencykey
     name_column: currency_name
   - unique_name: order
     label: Order
+    description: "Order level of the Order Dimension dimension in the Order Dimension hierarchy, from dimorder.salesordernumber (key: salesordernumber, currencykey)."
     dataset: dimorder
     key_columns:
       - salesordernumber

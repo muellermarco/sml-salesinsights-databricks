@@ -1,6 +1,7 @@
 unique_name: lastproductunitprice_scd
 object_type: metric
 label: Last Product Unit Price (SCD)
+description: "Maximum of factinternetsales_scd.unitprice; formatted as $#,##0.00."
 calculation_method: maximum
 folder: Product Metrics
 format: "$#,##0.00"

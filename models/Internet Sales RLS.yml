@@ -1,6 +1,7 @@
 unique_name: Internet Sales RLS
 object_type: model
 label: Internet Sales RLS
+description: "Internet Sales RLS model with 145 metrics in folders Customer Metrics, Product Metrics, Sales Metrics, Time Relative; fact datasets: factinternetsales; dimensions: Customer Dimension Security, Date Dimension, Order Dimension, Product Dimension Security."
 dimensions:
   - Color Dimension
   - Size Dimension

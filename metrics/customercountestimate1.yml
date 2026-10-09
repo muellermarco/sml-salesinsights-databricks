@@ -1,6 +1,7 @@
 unique_name: customercountestimate1
 object_type: metric
 label: Estimated Customer Count
+description: "Estimated Count Distinct of factinternetsales.customerkey; formatted as general number."
 calculation_method: estimated count distinct
 format: general number
 dataset: factinternetsales

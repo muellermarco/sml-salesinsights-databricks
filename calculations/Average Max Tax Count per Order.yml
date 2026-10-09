@@ -1,4 +1,5 @@
 unique_name: Average Max Tax Count per Order
 object_type: metric_calc
 label: Average Max Tax Count per Order
+description: "Average Max Tax Amount per order: Max Tax Amount divided by Order Quantity."
 expression: "([Measures].[maxtaxamount1] / [Measures].[orderquantity1])"
