@@ -1,6 +1,6 @@
 version: 1
 packages:
-  - version: commit:aeb6ea9896fff0f4fefb8673fdf3a627729b28d7
+  - version: commit:3af95a40cfc8d671ecd07ce988322fba8af0f205
     name: Common-Objects
     url: https://github.com/muellermarco/sml-salesinsights-common.git
     branch: databricks
