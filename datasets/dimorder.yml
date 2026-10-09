@@ -1,5 +1,6 @@
 unique_name: dimorder
 label: dimorder
+description: "dimorder: dimension table dimorder on connection Databricks (8 columns)."
 object_type: dataset
 connection_id: Databricks
 table: dimorder

@@ -1,4 +1,5 @@
 unique_name: Average Last Product Unit Count per Order
 object_type: metric_calc
 label: Average Last Product Unit Count per Order
+description: "Average Last Product Unit Price per order: Last Product Unit Price divided by Order Quantity."
 expression: "([Measures].[lastproductunitprice] / [Measures].[orderquantity1])"

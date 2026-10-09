@@ -2,6 +2,7 @@ unique_name: factinternetsales_scd
 object_type: dataset
 connection_id: Databricks
 label: factinternetsales_scd
+description: "factinternetsales_scd: fact table factinternetsales_scd on connection Databricks (15 columns)."
 table: factinternetsales_scd
 project_properties:
   allow_aggregates: true

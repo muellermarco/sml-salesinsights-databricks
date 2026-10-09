@@ -1,4 +1,5 @@
 unique_name: Average Customer Count per Order
 object_type: metric_calc
 label: Average Customer Count per Order
+description: "Average Customer Count per order: Customer Count divided by Order Quantity."
 expression: "([Measures].[customercount1] / [Measures].[orderquantity1])"

@@ -1,4 +1,5 @@
 unique_name: Average Sales Amount SD Count per Order
 object_type: metric_calc
 label: Average Sales Amount SD Count per Order
+description: "Average Sales Amount SStdev per order: Sales Amount SStdev divided by Order Quantity."
 expression: "([Measures].[salesamountsstdev1] / [Measures].[orderquantity1])"

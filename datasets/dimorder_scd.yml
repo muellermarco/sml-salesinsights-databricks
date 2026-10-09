@@ -2,6 +2,7 @@ unique_name: dimorder_scd
 object_type: dataset
 connection_id: Databricks
 label: dimorder_scd
+description: "dimorder_scd: dimension table dimorder_scd on connection Databricks (8 columns)."
 table: dimorder_scd
 project_properties:
   allow_aggregates: true

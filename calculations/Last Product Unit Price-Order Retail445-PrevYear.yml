@@ -1,7 +1,7 @@
 unique_name: Last Product Unit Price-Order Retail445-PrevYear
 object_type: metric_calc
 label: Last Product Unit Price-Order Retail445-PrevYear
-description: Order Sales Amount Prev Year (Retail445)
+description: "Last Product Unit Price for the same period of the previous year (parallel period) along the Order Retail445 hierarchy of the Order Date Dimension."
 expression: "CASE WHEN ISEMPTY([Measures].[lastproductunitprice]) THEN \nNULL \nELSE\
   \ (ParallelPeriod([Order Date Dimension].[Order Retail445].[Order rpt_Year],\
   \ 1, [Order Date Dimension].[Order Retail445].CurrentMember), [Measures].[lastproductunitprice])\

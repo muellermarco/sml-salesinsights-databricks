@@ -1,6 +1,7 @@
 unique_name: Sales
 object_type: model
 label: Sales
+description: "Sales model with 143 metrics in folders Customer Metrics, Product Metrics, Sales Metrics, Time Relative; fact datasets: factinternetsales; dimensions: Customer Dimension, Date Dimension, Order Dimension, Product Dimension."
 
 metrics:
   - unique_name: calculatedtax1

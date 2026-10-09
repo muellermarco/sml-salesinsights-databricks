@@ -1,6 +1,7 @@
 unique_name: orderquantity_scd
 object_type: metric
 label: Order Quantity (SCD)
+description: "Sum of factinternetsales_scd.orderquantity; formatted as general number."
 calculation_method: sum
 format: general number
 dataset: factinternetsales_scd

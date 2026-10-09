@@ -1,6 +1,7 @@
 unique_name: Internet Sales
 object_type: model
 label: Internet Sales
+description: "Internet Sales model with 145 metrics in folders Customer Metrics, Product Metrics, Sales Metrics, Time Relative; fact datasets: factinternetsales; dimensions: Customer Dimension, Date Dimension, Order Dimension, Product Dimension."
 dimensions:
   - Color Dimension
   - Size Dimension

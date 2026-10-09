@@ -30,6 +30,7 @@ level_attributes:
     time_unit: year
   - unique_name: Quarter_simple
     label: Quarter
+    description: "Quarter level of the Date Dimension Simple dimension in the Date Month Hierarchy hierarchy, from datecustom.quarter_name (key: quarter); time unit quarter."
     dataset: datecustom
     key_columns:
       - quarter
@@ -38,6 +39,7 @@ level_attributes:
     time_unit: quarter
   - unique_name: Month1_simple
     label: Month
+    description: "Month level of the Date Dimension Simple dimension in the Date Month Hierarchy hierarchy, from datecustom.month_name (key: month); time unit month."
     dataset: datecustom
     key_columns:
       - month

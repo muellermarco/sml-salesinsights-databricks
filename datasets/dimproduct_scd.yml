@@ -1,5 +1,6 @@
 unique_name: dimproduct_scd
 label: dimproduct_scd
+description: "dimproduct_scd: dimension table dimproduct_scd on connection Databricks (11 columns)."
 object_type: dataset
 connection_id: Databricks
 table: dimproduct_scd
