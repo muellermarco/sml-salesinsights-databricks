@@ -2,7 +2,12 @@ unique_name: Max Tax Amount-Order Retail445-Next
 object_type: metric_calc
 label: Max Tax Amount-Order Retail445-Next
 description: "Calculated measure: CASE WHEN ISEMPTY([Measures].[maxtaxamount1]) THEN NULL ELSE ([Order Date Dimension].[Order Retail445].CurrentMember.NextMember, [Measures].[maxtaxam…"
-expression: "CASE WHEN ISEMPTY([Measures].[maxtaxamount1]) \nTHEN NULL\nELSE\n([Order\
-  \ Date Dimension].[Order Retail445].CurrentMember.NextMember, [Measures].[maxtaxamount1])\n\
-  END\n                                "
+expression: |-
+  CASE
+    WHEN ISEMPTY([Measures].[maxtaxamount1]) THEN NULL
+    ELSE (
+           [Order Date Dimension].[Order Retail445].CurrentMember.NextMember,
+           [Measures].[maxtaxamount1]
+         )
+  END
 format: "$#,##0.00"

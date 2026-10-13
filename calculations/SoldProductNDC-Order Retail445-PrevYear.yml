@@ -2,7 +2,16 @@ unique_name: SoldProductNDC-Order Retail445-PrevYear
 object_type: metric_calc
 label: SoldProductNDC-Order Retail445-PrevYear
 description: "SoldProductNDC for the same period of the previous year (parallel period) along the Order Retail445 hierarchy of the Order Date Dimension."
-expression: "CASE WHEN ISEMPTY([Measures].[soldproductNDC1]) THEN \nNULL \nELSE (ParallelPeriod([Order\
-  \ Date Dimension].[Order Retail445].[Order rpt_Year], 1, [Order Date Dimension].[Order\
-  \ Retail445].CurrentMember), [Measures].[soldproductNDC1]) END"
+expression: |-
+  CASE
+    WHEN ISEMPTY([Measures].[soldproductNDC1]) THEN NULL
+    ELSE (
+           ParallelPeriod(
+             [Order Date Dimension].[Order Retail445].[Order rpt_Year],
+             1,
+             [Order Date Dimension].[Order Retail445].CurrentMember
+           ),
+           [Measures].[soldproductNDC1]
+         )
+  END
 format: general number
