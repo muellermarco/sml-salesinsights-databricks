@@ -2,7 +2,10 @@ unique_name: Last Product Unit Price-Order Retail445-PrevYearGrowthPct
 object_type: metric_calc
 label: Last Product Unit Price-Order Retail445-PrevYearGrowthPct
 description: "Growth in percent of Last Product Unit Price-Order Retail445-PrevYear and Last Product Unit Price-Order Retail445-PrevYearGrowth versus the same period of the previous year."
-expression: "CASE WHEN ISEMPTY([Measures].[Last Product Unit Price-Order Retail445-PrevYear])\
-  \ THEN NULL \nELSE [Measures].[Last Product Unit Price-Order Retail445-PrevYearGrowth]\
-  \ / [Measures].[Last Product Unit Price-Order Retail445-PrevYear] \nEND"
+expression: |-
+  CASE
+    WHEN ISEMPTY([Measures].[Last Product Unit Price-Order Retail445-PrevYear]) THEN NULL
+    ELSE [Measures].[Last Product Unit Price-Order Retail445-PrevYearGrowth]
+           / [Measures].[Last Product Unit Price-Order Retail445-PrevYear]
+  END
 format: percent

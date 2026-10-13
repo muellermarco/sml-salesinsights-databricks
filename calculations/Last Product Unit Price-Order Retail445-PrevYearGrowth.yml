@@ -2,9 +2,17 @@ unique_name: Last Product Unit Price-Order Retail445-PrevYearGrowth
 object_type: metric_calc
 label: Last Product Unit Price-Order Retail445-PrevYearGrowth
 description: Parallel Period Sales Growth  Since the Previous Year
-expression: "CASE WHEN ISEMPTY([Measures].[Last Product Unit Price-Order Retail445-PrevYear])\
-  \ or ISEMPTY(([Order Date Dimension].[Order Retail445].CurrentMember, [Measures].[lastproductunitprice]))\
-  \ THEN\nNULL \nELSE \n([Order Date Dimension].[Order Retail445].CurrentMember, [Measures].[lastproductunitprice])\
-  \ - [Measures].[Last Product Unit Price-Order Retail445-PrevYear]\nEND\n       \
-  \                         "
+expression: |-
+  CASE
+    WHEN ISEMPTY([Measures].[Last Product Unit Price-Order Retail445-PrevYear])
+           or ISEMPTY(
+             (
+               [Order Date Dimension].[Order Retail445].CurrentMember,
+               [Measures].[lastproductunitprice]
+             )
+           )
+    THEN NULL
+    ELSE ([Order Date Dimension].[Order Retail445].CurrentMember, [Measures].[lastproductunitprice])
+           - [Measures].[Last Product Unit Price-Order Retail445-PrevYear]
+  END
 format: "$#,##0.00"

@@ -2,7 +2,12 @@ unique_name: Customer Count-Order Retail445-Next
 object_type: metric_calc
 label: Customer Count-Order Retail445-Next
 description: "Calculated measure: CASE WHEN ISEMPTY([Measures].[customercount1]) THEN NULL ELSE ([Order Date Dimension].[Order Retail445].CurrentMember.NextMember, [Measures].[custome…"
-expression: "CASE WHEN ISEMPTY([Measures].[customercount1]) \nTHEN NULL\nELSE\n([Order\
-  \ Date Dimension].[Order Retail445].CurrentMember.NextMember, [Measures].[customercount1])\n\
-  END\n                                "
+expression: |-
+  CASE
+    WHEN ISEMPTY([Measures].[customercount1]) THEN NULL
+    ELSE (
+           [Order Date Dimension].[Order Retail445].CurrentMember.NextMember,
+           [Measures].[customercount1]
+         )
+  END
 format: general number
